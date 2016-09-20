@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :articles, only: [:show]
+  resources :owners, only: [:index]
+  match '/:name/articles' => "articles#index", via: [:get]
+  match '/:name' => "owners#show", via: [:get]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
