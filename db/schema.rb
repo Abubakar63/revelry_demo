@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160919125649) do
+ActiveRecord::Schema.define(version: 20160927065436) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "name",        limit: 30, null: false
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 20160919125649) do
   end
 
   add_index "articles", ["owner_id"], name: "index_articles_on_owner_id"
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "name"
+    t.string   "company_type"
+    t.string   "description"
+    t.integer  "size"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "owners", force: :cascade do |t|
     t.string   "name",       null: false

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :companies
   resources :articles, only: [:show]
   resources :owners, only: [:index]
   match '/:name/articles' => "articles#index", via: [:get]
