@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   private
 
     def authenticate_token
-      puts "hello"
+      puts "hello1"
       unless params['token'].present? && params['token'] == ENV['AUTH_TOKEN']
         head :unauthorized
       end
