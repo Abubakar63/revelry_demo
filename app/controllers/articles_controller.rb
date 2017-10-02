@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = @owner.articles
-    puts "articless"
+		puts "articles"
   end
 
   def show

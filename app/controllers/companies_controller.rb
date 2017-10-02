@@ -5,7 +5,7 @@ class CompaniesController < ApplicationController
   # GET /companies.json
   def index
     @companies = Company.all
-    puts "companiess"
+		puts "companies"
   end
 
   # GET /companies/1
